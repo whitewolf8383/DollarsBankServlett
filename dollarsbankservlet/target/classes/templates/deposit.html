@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Keith J Francis">
+    <meta name="description" content="Banking app project for Ascendion JUMP Program">
+    <meta name="keywords" content="Cognixia, Ascendion, JUMP Program, JUMP Plus">
+    <title>Dollars Bank - deposit</title>
+    <style>
+      body {
+        background-color: rgb(25, 33, 102);
+        color: white;
+      }
+      nav {
+        margin: auto;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+      }
+      nav h1 a {
+        font-size: 35px;
+        letter-spacing: 3px;
+      }
+      nav li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      main {
+        margin: auto;
+        text-align: center;
+      }
+      main h1 {
+        font-size: 25px;
+        letter-spacing: 2px;
+      }
+      main form {
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 4px 4px 15px 2px rgba(255, 255, 255, .15);
+        margin: auto;
+        margin-bottom: 30px;
+        padding: 20px;
+        width: 400px;
+      }
+      main form input {
+        display: block;
+        height: 25px;
+        margin: 15px auto;
+        width: 250px;
+      }
+      main a {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      .btn, form select {
+        height: 30px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1><a th:href="@{/accounts}">Dollars Bank</a></h1>
+        <ul>
+          <li><a th:href="@{/accounts}">Accounts</a></li>
+          <li><a th:href="@{/deposit}">Deposit</a></li>
+          <li><a th:href="@{/withdraw}">Withdraw</a></li>
+          <li><a th:href="@{/transfer}">Transfer</a></li>
+          <li><a th:href="@{/transactions}">Transactions</a></li>
+          <li><a th:href="@{/logout}">Log Out</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Deposit</h1>
+      <form action="#" method="post" th:action="@{/handleDeposit}">
+        <select name="depositTo" id="depositTo">
+          <option value="checking">Checking</option>
+          <option value="savings">Savings</option>
+        </select>
+        <input type="number" placeholder="Amount" min="0.00" step=".01" name="depositAmount">
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    </main>
+  </body>
+</html>

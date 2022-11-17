@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Keith J Francis">
+    <meta name="description" content="Banking app project for Ascendion JUMP Program">
+    <meta name="keywords" content="Cognixia, Ascendion, JUMP Program, JUMP Plus">
+    <title>Dollars Bank - Create Account</title>
+    <style>
+      body {
+        background-color: rgb(25, 33, 102);
+        color: white;
+      }
+      nav {
+        margin: auto;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+      }
+      nav h1 a {
+        font-size: 35px;
+        letter-spacing: 3px;
+      }
+      nav li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      main {
+        margin: auto;
+        text-align: center;
+      }
+      main h1 {
+        font-size: 25px;
+        letter-spacing: 2px;
+      }
+      main form {
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 4px 4px 15px 2px rgba(255, 255, 255, .15);
+        margin: auto;
+        margin-bottom: 30px;
+        padding: 20px;
+        width: 400px;
+      }
+      main form input {
+        display: block;
+        height: 25px;
+        margin: 15px auto;
+        width: 250px;
+      }
+      main a {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      .btn, form select {
+        height: 30px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Dollars Bank</h1>
+      </nav>
+    </header>
+    <main>
+      <h1>Create Account</h1>
+      <form action="#" method="post" th:action="@{/handleCreateAccount}">
+        <input type="text" placeholder="User ID" name="userID">
+        <input type="text" placeholder="Name" name="customerName">
+        <input type="text" placeholder="Address" name="address">
+        <input type="text" placeholder="City" name="city">
+        <input type="text" placeholder="State" name="state">
+        <input type="text" placeholder="ZipCode" name="zipCode">
+        <input type="text" placeholder="Phone" name="contactNumber">
+        <input type="text" placeholder="Email" name="email">
+        <input type="text" placeholder="Password" name="password">
+        <input type="text" placeholder="Confirm Password" name="confirmPassword">
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    </main>
+  </body>
+</html>
